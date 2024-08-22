@@ -5,6 +5,22 @@ __pycache__/
 
 # C extensions
 *.so
+.vscode
+benckmark_multi/
+benckmark_single/
+eval/
+subject/
+vendor/
+1.json
+2.json
+220000.jsonl
+extra_lu.json
+multi.zip
+output_multi.jsonl
+subject.zip
+subjects.json
+test_treesitter.py
+
 
 # Distribution / packaging
 .Python
