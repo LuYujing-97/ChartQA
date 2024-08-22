@@ -6,8 +6,8 @@ __pycache__/
 # C extensions
 *.so
 .vscode
-benckmark_multi/
-benckmark_single/
+benchmark_multi/
+benchmark_single/
 eval/
 subject/
 vendor/
