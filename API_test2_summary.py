@@ -128,52 +128,14 @@ def update_json_file(json_file, base_image_path, templates, model_name):
             f.write(json.dumps(entry, ensure_ascii=False) + '\n')
 
 # 定义 JSON 文件路径和基础图片路径
-# json_file = './benchmark_single/single_test_lu.jsonl'
+
 # base_image_path = './benchmark_single/single'
 json_file = './benchmark_multi/multi_lu.jsonl'
 base_image_path = './benchmark_multi/multi'
-# base_image_path = './subject/subject/astro-ph.IM/'
-# 定义不同的模板
-# templates = {
-#     'visual_questions': """Role: You are an AI visual assistant who can analyze a scientific paper graph. 
-# Task: You are provided with an image and its caption. Generate two visual questions based solely on the provided image and information, and provide corresponding answers for each question. For each question, provide the following:
-# Question: The question itself.
-# Answer: The final, concise answer.
-# Requirements: The answer should be within 10 words. Ensure the answers are simple, definite, and concise. The questions should focus on the visual aspects of the chart, including elements such as colors, text, formulas, and chart types. Avoid questions involving maximum or minimum values, and aim for questions related to the analysis of chart elements.
-# Caption: {caption}
-# END_OF_INSTRUCTIONS
-# """,
-#     'data_retrieval_questions': """Role: You are an AI visual assistant who can analyze a scientific paper graph. 
-# Task: You are provided with an image and its caption. Generate one Data Retrieval question based solely on the provided image and information, and provide corresponding answers for each question. For each question, provide the following:
-# Question: The question itself.
-# Answer: The final, concise answer.
-# Requirements: The answer should be within 10 words. Ensure the answers are simple, definite, and concise. The questions should require retrieving specific data points or ranges from the chart.
-# Caption: {caption}
-# END_OF_INSTRUCTIONS
-# """,
-#     'reasoning_questions': """Role: You are an AI visual assistant who can analyze a scientific paper graph. 
-# Task: You are provided with an image and its caption. Generate two Reasoning questions based solely on the provided image and information. For each question, provide the following:
-# Question: The question itself.
-# Answer: The final, concise answer.
-# Requirements:
-# The answer should be within 20 words.
-# One question requires numerical calculations, comparisons, and other information that cannot be directly obtained from the image. Only ask questions that you can clearly answer yourself.
-# Caption: {caption}
-# END_OF_INSTRUCTIONS""",
-#     'chart_description': """Role: You are an AI visual assistant who can analyze a scientific paper graph. 
-# Task: You are provided with an image and its caption. Generate a chart description that aims at presenting all the visual elements of the plot.
-# Requirements: The answer should be within 100 words.
-# Caption: {caption}
-# END_OF_INSTRUCTIONS""",
-#     'chart_summarization': """Role: You are an AI visual assistant who can analyze a scientific paper graph. 
-# Task: You are provided with an image, its caption, its description, and the paper's title. Generate a chart summarization that aims at summarizing the trend-like or high-level characteristics from the plot.
-# Requirements: The answer should be within 100 words, and should be as related to the image as possible.
-# Caption: {caption}
-# Des: {ref}
-# Title: {title}
-# END_OF_INSTRUCTIONS"""
-# }
 
+
+
+#Chart_Summarization
 # templates = {
 #     'Chart_Summarization': """Role: You are an AI visual assistant who can analyze a scientific paper graph. 
 # Task: You are provided with an image, its caption, its description, and the paper's title. Generate a chart summarization that aims at summarizing the trend-like or high-level characteristics from the plot.
@@ -183,6 +145,7 @@ base_image_path = './benchmark_multi/multi'
 # Title: {title}
 # END_OF_INSTRUCTIONS"""
 # }
+#background_reasoning
 templates = {
     'reasoning_questions': """Role: You are an AI visual assistant who can analyze a scientific paper graph. 
 Task: You are provided with an image, its caption and its description. Generate one Reasoning question based solely on the provided image and information. For each question, provide the following:
