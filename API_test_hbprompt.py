@@ -144,7 +144,7 @@ Requirements:
 
 Visual Questions (2): The questions should focus on the visual aspects of the chart, including elements such as colors, text, formulas, and chart types. Avoid questions involving maximum or minimum values, and aim for questions related to the analysis of chart elements. Answers should be within 10 words.
 
-Data Retrieval Question (1): The question should require retrieving specific data points or ranges from the chart. Avoid questions involving maximum or minimum values. Answers should be within 10 words.
+Data Retrieval Question (1): The question should require retrieving specific data points or range of the data point from the chart. Avoid questions involving maximum or minimum values. Answers should be within 10 words.
 
 Reasoning Questions (4): These questions require numerical calculations, comparisons, and other information that cannot be directly obtained from the image. Two questions should involve comparisons between multiple images. Only ask questions that you can clearly answer yourself. Answers should be within 20 words.
 
