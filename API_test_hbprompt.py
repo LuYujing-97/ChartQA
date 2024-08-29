@@ -187,6 +187,60 @@ Caption: {caption}
 END_OF_INSTRUCTIONS""",
 }
 
+templates_single = {
+    'generated_questions': """Role: You are an AI visual assistant who can analyze a scientific paper graph.
+
+Task: You are provided with an image and its caption. Generate six questions based solely on the provided image and information, and provide corresponding answers for each question. For each question, provide the following:
+
+Question: The question itself.
+Answer: The final, concise answer.
+Requirements:
+
+Visual Questions (2): The questions should focus on the visual aspects of the chart, including elements such as colors, text, formulas, and chart types. Avoid questions involving maximum or minimum values, and aim for questions related to the analysis of chart elements. Answers should be within 10 words.
+
+Data Retrieval Question (1): The question should require retrieving specific data points or range of the data point from the chart. Avoid questions involving maximum or minimum values. Answers should be within 10 words.
+
+Reasoning Questions (2): These questions require numerical calculations, comparisons, and other information that cannot be directly obtained from the image. Answers should be within 20 words.
+
+Chart Description (1): Generate a chart description that aims at presenting all the visual elements of the plot. Answers should be within 100 words.
+Example Questions and Answers:
+
+Visual Question 1:
+
+Question: What color represents the progenitor stars with metallicity Z=0.013-0.02 in the graph?
+Answer: Pink or light purple.
+Visual Question 2:
+
+Question: What type of chart is used in the image?
+Answer: Line chart.
+Data Retrieval Question:
+
+Question: What is the metallicity range labeled as "Z:0.013-0.02"?
+Answer: Z=0.013-0.02.
+Reasoning Question 1:
+
+Question: Comparing the two charts, which shows a stronger correlation between X and Y variables?
+Answer: The left chart shows a stronger correlation.
+Reasoning Question 2:
+
+Question: Based on the trends in both panels, how does the data suggest the relationship between metallicity and star formation rate?
+Answer: Higher metallicity generally correlates with a lower star formation rate.
+Reasoning Question 3:
+
+Question: How does the pink curve compare to the blue curve at Z=0.02?
+Answer: The pink curve is higher.
+Reasoning Question 4:
+
+Question: Calculate the difference in slope between the green and red lines.
+Answer: Green line has a steeper slope.
+Chart Description:
+
+Question: Describe the chart.
+Answer: The chart displays several colored lines representing different metallicity ranges of progenitor stars. Each line is labeled in the legend, with colors including pink, blue, green, and red. The X-axis represents metallicity values, and the Y-axis represents an unspecified variable. The lines show trends and variations in the data across the metallicity spectrum.
+Caption: {caption}
+END_OF_INSTRUCTIONS""",
+}
+
 
 
 # 更新 JSON 文件
